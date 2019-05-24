@@ -5,8 +5,15 @@
 
 
 
-# Practical Machine Learning with R by Packt
+# Practical Machine Learning with R
 Understand how machine learning works and get hands-on experience of using R to build algorithms that can solve various real-world problems 
+
+With huge amounts of data being generated every moment, businesses need applications that apply complex mathematical calculations to data repeatedly and at speed. With machine learning techniques and R, you can easily develop these kinds of applications in an efficient way.
+
+Practical Machine Learning with R begins by helping you grasp the basics of machine learning methods, while also highlighting how and why they work. You will understand how to get these algorithms to work in practice, rather than focusing on mathematical derivations. As you progress from one chapter to another, you will gain hands-on experience of building a machine learning solution in R. Next, using R packages such as rpart, random forest, and multiple imputation by chained equations (MICE), you will learn to implement algorithms including neural net classifier, decision trees, and linear and non-linear regression. As you progress through the course, you’ll delve into various machine learning techniques for both supervised and unsupervised learning approaches. In addition to this, you’ll gain insights into partitioning the datasets and mechanisms to evaluate the results from each model and be able to compare them. 
+
+By the end of this course, you will have gained expertise in solving your business problems, starting by forming a good problem statement, selecting the most appropriate model to solve your problem, and then ensuring that you do not overtrain it.
+
 
 ## What you will learn
 * Define a problem that can be solved by training a machine learning model
@@ -31,26 +38,23 @@ For an optimal student experience, we recommend the following hardware configura
 
 ### Software requirements
 You'll also need the following software installed in advance:
-* **OS**: Windows 7 SP1 64-bit, Windows 8.1 64-bit or Windows 10 64-bit, Ubuntu Linux, or the latest
-version of macOS
+* **OS**: OS: Windows 7, 8.1, or 10 64-bit, Ubuntu, or the latest version of macOS
 * Browser: Google Chrome/Mozilla Firefox Latest Version
 * R installed
-* R libraries as needed (mice,caret,rpart,groupdata2,cvms,neuralnet,NeuralNetTools,rPref,mlbench,knitr,interplot, and so)
+* R libraries as needed (mice, caret, rpart, groupdata2, cvms, neuralnet, NeuralNetTools, rPref, mlbench, knitr, interplot, and so)
 
 
-**The following Python libraries are needed**:
-* R
-* Cross validation
-* Deep Learning
-* Machine Learning
-* Logistic Regression Model
-* Advanced modeling stratergies
-* Neural Networks
-* Non- linear Regression
-* Classification
-* Clustering
-* Balanced Partitioning
-* Data Preprocessing
+**The following R libraries are needed**:
+* mice
+* caret
+* rpart
+* cvms
+* neuralnet
+* NeuralNetTools
+* rPref
+* mlbench
+* knitr
+* interplot
 
 
 
