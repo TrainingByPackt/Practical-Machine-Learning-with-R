@@ -1,14 +1,25 @@
-#Adding new features to a R datadrame
+#Loading the library
 library(caret)
 
+# load the German Credit Data
 data(GermanCredit)
 
-#Assign the value to the new field
-GermanCredit$NewField=1
+# calculating the correlation matrix
+correlationMatrix <- cor(GermanCredit[,1:9])
 
-str(GermanCredit)
+# printing the correlation matrix
+print(correlationMatrix)
 
-#Copy a existing column into a new column
-GermanCredit$NewField2=GermanCredit$Purpose.Repairs 
+# finding the attributes that are highly corrected 
+filterCorrelation <- findCorrelation(correlationMatrix, cutoff=0.5)
 
-str(GermanCredit)
+# print indexes of highly correlated fields
+print(filterCorrelation)
+
+print(correlationMatrix)
+
+# finding the attributes that are highly corrected 
+# print indexes of highly correlated fields
+highlyCorrelated <- findCorrelation(correlationMatrix, cutoff=0.5)
+print(highlyCorrelated)
+
