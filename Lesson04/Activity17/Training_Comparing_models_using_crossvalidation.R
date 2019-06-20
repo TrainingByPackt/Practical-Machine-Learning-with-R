@@ -20,7 +20,7 @@ diabetes_data <- PimaIndiansDiabetes2
 diabetes_data$triceps <- NULL
 diabetes_data$insulin <- NULL
 
-# Remove all rows with Nas (missing data)
+# Remove all rows with NAs (missing data)
 diabetes_data <- na.omit(diabetes_data)
 
 # Partition into a training set and a validation set
@@ -40,7 +40,7 @@ valid_set[, 1:6] <- predict(params, valid_set[, 1:6])
 
 # Create folds for cross-validation
 # Balance on the Class variable
-train_set <- fold(train_set, k=4, cat_col = "diabetes")
+train_set <- fold(train_set, k = 4, cat_col = "diabetes")
 # Note: This creates a factor in the dataset called ".folds"
 # Take care not to use this as a predictor 
 
@@ -95,12 +95,12 @@ for (part in 1:4){
 
 average_error <- mean(errors)
 average_error
-The output is as follows:
+# The output is as follows:
 ## [1] 28.38503
 
 average_accuracy <- mean(accuracies)
 average_accuracy
-The output is as follows:
+# The output is as follows:
 ## [1] 0.7529813
 
 # Once you have chosen the best model, train it on the entire training set
@@ -110,7 +110,7 @@ The output is as follows:
 # it has enough training steps to converge
 nn_best <- neuralnet(diabetes == "pos" ~ .,
                      train_set[, 1:7], 
- 			     linear.output = FALSE,
+ 		     linear.output = FALSE,
                      hidden=c(2,2),
                      stepmax = 2e+05)
 
