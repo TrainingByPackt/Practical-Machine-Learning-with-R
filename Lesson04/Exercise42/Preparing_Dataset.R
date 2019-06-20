@@ -1,8 +1,11 @@
 # Attaching the packages
 library(caret)
 library(groupdata2)
+
 # Load the GermanCredit dataset
 data(GermanCredit)
+
+# See the structure of the dataset
 str(GermanCredit[,1:10])
 ## 'data.frame':    1000 obs. of  10 variables:
 ##  $ Duration                 : int  6 48 12 42 24 36 24 36 12 30 ...
@@ -15,5 +18,6 @@ str(GermanCredit[,1:10])
 ##  $ Telephone                : num  0 1 1 1 1 0 1 0 1 1 ...
 ##  $ ForeignWorker            : num  1 1 1 1 1 1 1 1 1 1 ...
 ##  $ Class                    : Factor w/ 2 levels "Bad","Good": 2 1 2 2 1 2 2 2 2 1 ...
+
 # Remove the Age column
 GermanCredit$Age <- NULL
