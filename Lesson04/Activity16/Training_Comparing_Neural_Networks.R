@@ -12,7 +12,7 @@ set.seed(1)
 PimaIndiansDiabetes2 <-read.csv("PimaIndiansDiabetes2.csv")
 
 summary(PimaIndiansDiabetes2)
-The summary is as follows:
+# The summary is as follows:
 ##     pregnant         glucose         pressure         triceps     
 ##  Min.   : 0.000   Min.   : 44.0   Min.   : 24.00   Min.   : 7.00  
 ##  1st Qu.: 1.000   1st Qu.: 99.0   1st Qu.: 64.00   1st Qu.:22.00  
@@ -180,7 +180,7 @@ for (i in 1:length(models)){
 ##        'Positive' Class : 1               
 ## 
 
-As the nn6 model has the highest accuracy and F1 score, it is the best model.
+# As the nn6 model has the highest accuracy and F1 score, it is the best model.
 
 # Create one-hot encoding of Class variable
 valid_true_labels <- ifelse(valid_set$diabetes == "pos", 1, 0)
@@ -193,7 +193,7 @@ predictions <- ifelse(predicted_probabilities > 0.5, 1, 0)
 confusion_matrix <- confusionMatrix(as.factor(predictions), 
                                     as.factor(valid_true_labels), 
                                     mode="prec_recall", positive = "1")
-18.	Print the results:
+
 # Print the results for this model
 # Note that by separating two function calls by ";"
 # we can have multiple calls per line
