@@ -2,12 +2,11 @@
 library(outliers)
 
 #Detect outliers
-outlier(iris_new[,1:4])
-
+outlier(mtcars)
 
 #This detects outliers from the other side
-outlier(iris_new[,1:4],opposite=TRUE)
+outlier(mtcars,opposite=TRUE)
 
 #View the outliers
-boxplot(iris_new[,1:4])
+boxplot(mtcars)
 
