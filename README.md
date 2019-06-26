@@ -41,13 +41,14 @@ You'll also need the following software installed in advance:
 * **OS**: OS: Windows 7, 8.1, or 10 64-bit, Ubuntu, or the latest version of macOS
 * Browser: Google Chrome/Mozilla Firefox Latest Version
 * R installed
-* R libraries as needed (mice, caret, rpart, groupdata2, cvms, neuralnet, NeuralNetTools, rPref, mlbench, knitr, interplot, and so)
+* R libraries as needed (mice, caret, rpart, groupdata2, cvms, neuralnet, NeuralNetTools, rPref, mlbench, knitr, interplot, car)
 
 
 **The following R libraries are needed**:
 * mice
 * caret
 * rpart
+* groupdata2
 * cvms
 * neuralnet
 * NeuralNetTools
@@ -55,6 +56,8 @@ You'll also need the following software installed in advance:
 * mlbench
 * knitr
 * interplot
+* doParallel
+* car
 
 
 
