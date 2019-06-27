@@ -1,16 +1,20 @@
 
 # Attach caret
 library(caret)
+
 # Create a one-hot encoding of the Class variable
 # ifelse() takes the arguments: "If x, then a, else b"
 true_labels <- ifelse(dev_set$Class == "Good", 1, 0)
+
 # Predict the class in the dev set
 # It returns probabilities that the observations are "Good"
 predicted_probabilities <- predict(nn, dev_set)
 predictions <- ifelse(predicted_probabilities > 0.5, 1, 0)
+
 # Create confusion matrix
-confusion_matrix <- confusionMatrix(as.factor(predictions),										      as.factor(true_labels), 
-                                    mode="prec_recall", positive = "1")
+confusion_matrix <- confusionMatrix(as.factor(predictions), as.factor(true_labels), 
+                                    mode = "prec_recall", positive = "1")
+
 confusion_matrix
 ## Confusion Matrix and Statistics
 ## 

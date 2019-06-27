@@ -1,16 +1,21 @@
  
 # Attach caret
 library(caret)
+
 # Create one-hot encoding of Class variable
 true_labels <- ifelse(dev_set$Class == "Good", 1, 0)
+
 # The number of predictions to make 
 num_total_predictions <- 200  # Alternatively: length(true_labels)
+
 # All "Good"
 good_predictions <- rep(1, num_total_predictions)
+
 # Create confusion Matrix
 confusion_matrix_good <- confusionMatrix(as.factor(good_predictions),									      as.factor(true_labels), 
-                                            mode="prec_recall", 
-								positive = "1")
+                                         mode = "prec_recall", 
+					 positive = "1")
+
 confusion_matrix_good
 ## Confusion Matrix and Statistics
 ## 
@@ -37,13 +42,16 @@ confusion_matrix_good
 ##                                           
 ##        'Positive' Class : 1               
 ## 
+
+
 # All "Bad"
 bad_predictions <- rep(0, num_total_predictions)
-Create a confusion matrix and inspect the results:
+
 # Create confusion Matrix
 confusion_matrix_bad <- confusionMatrix(as.factor(bad_predictions),									     as.factor(true_labels),
-                                           mode="prec_recall",
-							     positive = "1")
+                                        mode = "prec_recall",
+					positive = "1")
+
 confusion_matrix_bad
 ## Confusion Matrix and Statistics
 ##
@@ -68,28 +76,37 @@ confusion_matrix_bad
 ##    Detection Prevalence : 0.0             
 ##       Balanced Accuracy : 0.5             
 ##                                           
-##        'Positive' Class : 1               
+##        'Positive' Class : 1  
+
+# Random predictions
+
 # Set seed for reproducibility
 set.seed(1)
+
 # The number of evaluations to do
 num_evaluations <- 100
+
 # Repeat the true labels vector 100 times
 true_labels_100 <- rep(true_labels, num_evaluations)
-# Random predictions 
+
 # Draw random predictions (either 1 or 2, hence the "-1")
 random_predictions <- sample.int(2, 
-				   size = num_total_predictions * num_evaluations, 
-                         replace = TRUE) - 1
+				 size = num_total_predictions * num_evaluations, 
+                         	 replace = TRUE) - 1
+
 head(random_predictions)
 ## [1] 0 0 1 1 0 1
+
 # Average number of times predicting "Good"
 sum(random_predictions) / num_evaluations
 ## [1] 99.59
+
 # Create confusion Matrix
 confusion_matrix_random <- confusionMatrix(as.factor(random_predictions), 
                                            as.factor(true_labels_100), 
-                                           mode="prec_recall", 
+                                           mode = "prec_recall", 
                                            positive = "1")
+
 confusion_matrix_random
 ## Confusion Matrix and Statistics
 ## 
