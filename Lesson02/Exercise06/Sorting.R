@@ -1,4 +1,7 @@
+
 #sorting a dataframe
+library(mlbench)
+library(caret)
 data()
 attach(PimaIndiansDiabetes)
 
