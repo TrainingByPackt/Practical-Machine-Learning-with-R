@@ -1,7 +1,6 @@
-
-
 # Set seed for reproducibility and easy comparison
 set.seed(1)
+
 # Attach doParallel and 
 # register four CPU cores
 library(doParallel)

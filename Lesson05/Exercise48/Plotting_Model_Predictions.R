@@ -5,6 +5,7 @@ library(ggplot2)
 plotting_data <- train_set
 # Use the model to predict prices in the training set
 plotting_data$predicted_price <- predict(lin_model, train_set)
+
 # Create ggplot object and specify the data and x,y axes
 ggplot(data = plotting_data, 
        mapping = aes(x = in_sacramento, y = price)) + 

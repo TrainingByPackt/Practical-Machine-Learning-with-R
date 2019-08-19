@@ -1,4 +1,3 @@
-
 # Attach the packages
 library(caret)
 library(groupdata2)
@@ -38,8 +37,8 @@ nn <- neuralnet(Class == "Good" ~ InstallmentRatePercentage +
 
 # Plot the network
 plotnet(nn, var_labs=FALSE)
-The output is as follows:
- 
+
+# The output is as follows:
 train_error <- nn$result.matrix[1]
 train_error
 

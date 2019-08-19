@@ -15,7 +15,6 @@ model <- train(Class~., data=GermanCredit[,1:10], method="lvq", preProcess="scal
 
 
 # Getting the variable importance
-
 importance <- varImp(model, scale=FALSE)
 
 # print the variable importance

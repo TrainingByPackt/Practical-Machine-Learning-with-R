@@ -1,7 +1,11 @@
 
 library(cluster)   
 library(factoextra)
-df <- mtcars
+df <- read.csv("mtcars.csv")
+
+rownames(df) <- df$X
+df$X <- NULL
+
 df <- na.omit(df)
 df <- scale(df)
 dv <- diana(df,metric = "manhattan", stand = TRUE)

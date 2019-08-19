@@ -1,8 +1,8 @@
 #View the NA
-tail(iris_new)
+tail(PimaIndiansDiabetes_new)
 
 library(mice)
-impute_step1 = mice(iris_new)
+impute_step1 = mice(PimaIndiansDiabetes_new)
 imputed_data = complete(impute_step1)
 
 #View the imputed values

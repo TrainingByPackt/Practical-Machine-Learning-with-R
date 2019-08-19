@@ -11,6 +11,4 @@ head(PimaIndiansDiabetesData)
 levels(PimaIndiansDiabetesData$diabetes)
 library(ggplot2)
 barplot <- ggplot(data= PimaIndiansDiabetesData, aes(x=age))
-plot()
 barplot + geom_histogram(binwidth=0.2, color="black", aes(fill=diabetes))  + ggtitle("Histogram of Age")
-

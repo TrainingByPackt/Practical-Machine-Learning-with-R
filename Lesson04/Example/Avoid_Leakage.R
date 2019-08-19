@@ -1,5 +1,6 @@
 # Avoiding ID leakage
-# NOTE: Can’t be run as we don’t actually have an ApplicantID column
+# NOTE: Can't be run as we don't actually have an ApplicantID column
+data(GermanCredit)
 partition(GermanCredit, p = c(0.6, 0.2),
           cat_col = "Class",
           id_col = "ApplicantID")

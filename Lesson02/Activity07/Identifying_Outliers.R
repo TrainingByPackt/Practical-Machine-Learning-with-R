@@ -1,6 +1,8 @@
 #Load the outlier library
 library(outliers)
 
+mtcars = read.csv("mtcars.csv")
+
 #Detect outliers
 outlier(mtcars)
 

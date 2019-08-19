@@ -9,7 +9,7 @@ library(tidyverse)
 ## the text is a review of a product
 text_data <- c(
   "This product was delivered very fast",
-  "IT’S A GREAT DAY TODAY!",
+  "IT'S A GREAT DAY TODAY!",
   paste("The product works very efficiently"),
   paste("The product saves us a lot of time"),
   paste("The seller arranged a timely delivery")

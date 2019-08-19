@@ -1,3 +1,4 @@
+library(ROSE)
 library(caret)
 set.seed(2)
 

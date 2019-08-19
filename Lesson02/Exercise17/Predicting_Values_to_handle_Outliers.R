@@ -10,6 +10,7 @@ iris_new$Sepal.Width=as.numeric(iris_new$Sepal.Width)
 iris_new$Petal.Length=as.numeric(iris_new$Petal.Length)
 iris_new$Petal.Width=as.numeric(iris_new$Petal.Width)
 
+install.packages("rpart")
 library(rpart)
 
 class_mod <- rpart(Species ~ . - Sepal.Length, data=iris_new[!is.na(iris_new$Species), ], method="class", na.action=na.omit) 

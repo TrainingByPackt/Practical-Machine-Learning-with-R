@@ -1,6 +1,7 @@
 library(cluster)
-data(animals)
-apply(animals,2, table) # simple overview
-ma <- mona(animals)
-ma
-plot(ma)
+data(agriculture)
+agriculture
+dv <- diana(agriculture, metric = "manhattan", stand = TRUE)
+print(dv)
+plot(dv)
+str(as.dendrogram(dv))

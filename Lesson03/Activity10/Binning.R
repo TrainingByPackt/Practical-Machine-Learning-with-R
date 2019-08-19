@@ -1,5 +1,6 @@
 #Time series features
 library(caret)
+library(groupdata2)
 
 #Install caret if not installed
 #install.packages('caret')
@@ -14,7 +15,7 @@ ggplot(data=GermanCredit, aes(x=GermanCredit$Duration)) +
   geom_rug() +
   labs(x='mean Duration')
 
-  #Creating Bins
+# Creating Bins
 # set up boundaries for intervals/bins
 breaks <- c(0,10,20,30,40,50,60,70,80)
 

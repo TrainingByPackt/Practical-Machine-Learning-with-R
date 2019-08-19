@@ -1,3 +1,5 @@
+data(BostonHousing)
+
 #Build multi variable regression
 regression <- lm(medv~crim + indus+rad , data = BostonHousing)
 

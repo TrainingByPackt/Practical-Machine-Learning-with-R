@@ -1,9 +1,9 @@
 #Load the library
 library(caret)
+library(ROSE)
 
 #load the dataset
 data(GermanCredit)
-
 
 #View samples
 head(GermanCredit)

@@ -12,10 +12,6 @@ PimaIndiansDiabetes_subset
 #Train a rpart model
 rPartMod <- train(diabetes ~ ., data=PimaIndiansDiabetes_subset, method="rpart")
 
-#Train a rpart model
-rPartMod <- train(diabetes ~ ., data=PimaIndiansDiabetes_subset, method="rpart")
-
-
 #Find variable importance
 rpartImp <- varImp(rPartMod)
 

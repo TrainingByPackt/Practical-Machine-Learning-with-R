@@ -1,5 +1,7 @@
 #Skewness
 library(mlbench)
+library(e1071) 
+
 PimaIndiansDiabetes = read.csv("PimaIndiansDiabetes.csv")
 
 #Printing the skewness of the columns 

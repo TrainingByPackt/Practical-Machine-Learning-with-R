@@ -12,6 +12,7 @@ data(cars)
 partitions <- partition(cars, p = 0.8)
 train_set <- partitions[[1]]
 valid_set <- partitions[[2]]
+
 # Fit a couple of linear models and interpret them
 # Model 1 - Predicting price by mileage
 model_1 <- lm(Price ~ Mileage, data = train_set)
@@ -84,8 +85,8 @@ summary(model_3)
 # Limit the number of times a fixed effect is included to 1
 model_formulas <- combine_predictors(
   dependent = "Price",
-  fixed_effects = c("Mileage", Cylinder",
-                    "Doors", Cruise"),
+  fixed_effects = c("Mileage", "Cylinder",
+                    "Doors", "Cruise"),
   max_fixed_effects = 3,
   max_interaction_size = 2,
   max_effect_frequency = 1)
@@ -124,6 +125,7 @@ model_formulas
 ## [30] "Price ~ Cylinder * Mileage + Doors" 
 ## [31] "Price ~ Cylinder + Doors * Mileage" 
 ## [32] "Price ~ Cylinder + Doors + Mileage"
+
 # Create 5 fold columns with 4 folds each in the training set
 train_set <- fold(train_set, k = 4, 
                   num_fold_cols = 5)
@@ -153,8 +155,10 @@ V_results <- validate(
   family = "gaussian")
 valid_results <- V_results$Results
 valid_model <- V_results$Models[[1]]
+
 # Print the results
 kable(select_metrics(valid_results), digits = 2)
+
 # Print the model summary and interpret it
 summary(valid_model)
 ## 

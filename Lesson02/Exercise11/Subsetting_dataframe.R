@@ -2,7 +2,7 @@
 library(mlbench)
 data("PimaIndiansDiabetes")
 
-Subsetting Data
+# Subsetting Data
 # select variables age, glucose, pressure
 myvars <- c("age", "glucose", "pressure")
 newdata <- PimaIndiansDiabetes[myvars]
@@ -18,6 +18,6 @@ head(newdata)
 
 # using subset function
 newdata <- subset(PimaIndiansDiabetes,
- insulin >= 20 & age < 30,
- select=c(insulin, age))
+                     insulin >= 20 & age < 30,
+                     select=c(insulin, age))
 head(newdata)

@@ -19,5 +19,6 @@ smote_fit <- train(Class ~ .,
              verbose = FALSE,
                    metric = "ROC",
                    trControl = ctrl)
+smote_fit
 
 				   

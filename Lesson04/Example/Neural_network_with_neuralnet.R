@@ -10,10 +10,6 @@ nn1 <- neuralnet(Class == "Good" ~ Duration + Amount,
 plot(nn1, rep = "best", fontsize = 10)
 train_error <- nn1$result.matrix[1]
 train_error
-## [1] 60.35553
-
-# ----------------------------------------------------------------
-# Using column 11 to 20 as predictors
 
 # Attach packages
 library(neuralnet)

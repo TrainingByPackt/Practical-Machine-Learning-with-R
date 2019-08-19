@@ -24,29 +24,3 @@ confusionMatrix(in_sacramento_predictions,
                 valid_set$in_sacramento, 
                 positive = "1",
                 mode = "prec_recall")
-## Confusion Matrix and Statistics
-## 
-##           Reference
-## Prediction  0  1
-##          0 64 28
-##          1 35 60
-##                                           
-##                Accuracy : 0.6631          
-##                  95% CI : (0.5905, 0.7304)
-##     No Information Rate : 0.5294          
-##     P-Value [Acc > NIR] : 0.0001434       
-##                                           
-##                   Kappa : 0.3268          
-##                                           
-##  Mcnemar's Test P-Value : 0.4496918       
-##                                           
-##               Precision : 0.6316          
-##                  Recall : 0.6818          
-##                      F1 : 0.6557          
-##              Prevalence : 0.4706          
-##          Detection Rate : 0.3209          
-##    Detection Prevalence : 0.5080          
-##       Balanced Accuracy : 0.6641          
-##                                           
-##        'Positive' Class : 1               
-## 

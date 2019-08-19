@@ -8,7 +8,7 @@ true_labels <- ifelse(dev_set$Class == "Good", 1, 0)
 
 # Predict the class in the dev set
 # It returns probabilities that the observations are "Good"
-predicted_probabilities <- predict(nn, dev_set)
+predicted_probabilities <- predict(nn1, dev_set)
 predictions <- ifelse(predicted_probabilities > 0.5, 1, 0)
 
 # Create confusion matrix
